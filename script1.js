@@ -58,7 +58,7 @@ function getCityName() {
 function findUserLocation(){
 
     Forecast.innerHTML="";
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=552fcd97b3254a8c9d282304241811&q=${userLocation.value}&days=8`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=552fcd97b3254a8c9d282304241811&q=${userLocation.value}&days=8`)
     .then((res)=> res.json().then((data)=>{
         console.log(data)
 
