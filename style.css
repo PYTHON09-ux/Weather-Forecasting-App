@@ -105,10 +105,10 @@ body{
   font-weight: 300; ;
 }
 
+
 /* ----------------------------- Media Queries for ipad Mini --------------------------------- */
 
-@media screen and (max-width: 768px){
-  
+@media screen and (max-width: 768px) and (max-width: 1025px){
   .container{
     flex-direction: column;
   }
@@ -149,6 +149,42 @@ body{
   }
   
 }
+
+
+/* -------------------for iphone se ---------------------------- */
+@media screen and (min-width: 0px) and (max-width: 377px){
+
+  #userLocation{
+    width:100% !important;
+  }
+
+  .weatherIcon{
+    position: static;
+    height:4rem;
+    margin-bottom: 1rem;
+  }
+
+  .temperature{
+    font-size: 3.2rem;
+    text-align: center;
+    display: flex;
+    font-weight: 300; ;
+  }
+
+  /* .weather-input{
+    width: 30%;
+    position: fixed;
+    inset: 0;
+    background: rgb(255, 255, 255);
+    padding: 1rem 2.5rem;
+  } */
+
+
+}
+
+
+
+
 /* ---------------------------- right side div styling -------------------------------------- */
 .weather-output{
   width: 80%;
@@ -213,7 +249,7 @@ body{
 
 /* ---------------------------Media Queris for Right Side Div-------------------------------------- */
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) and (max-width:1025px){
 
   .weather-output{
     width: 100%;
@@ -231,6 +267,36 @@ body{
   }
 
 }
+
+
+/* ---------------for iphone se----------------------- */
+  @media screen and (min-width: 0px) and (max-width: 377px){
+
+    .Hightlights i {
+      font-size: 20px;
+    }
+    .weather-output{
+      width: 100%;
+      position: static; 
+      /* padding-top: 40vh; */
+      margin-left:0%;
+    }
+    .Hightlights{
+      display: grid;
+      grid-template-columns: repeat(2, 150px);
+    }
+
+    .Hightlights .humidity, #HValue,
+    .wind-speed, #WValue,
+    .surise .sunset, #SSValue, #SRValue,
+    .Clouds, #CValue,
+    .uv-index ,#UVValue,
+    .pressure, #PValue{
+     font-size: small;
+    }
+  }
+
+
 /* ------------------------forecast div styling------------------------------------------ */
 
 .Forecast{
@@ -369,4 +435,36 @@ body{
       .footer-div {
         margin-top: 4rem;
       }
+  }
+
+
+  /* ---------------for iphone se----------------------- */
+  @media screen and (min-width: 0px) and (max-width: 377px){
+
+    .Forecast{
+      display: grid;
+      height: 0;
+      grid-template-columns: repeat(2,150px);
+      grid-template-rows: repeat(2,240px);
+      grid-auto-flow:row;
+      row-gap: 1rem;
+      column-gap:10px;
+      }
+
+
+      .footer-div{
+        position: absolute;
+        margin: 1rem 0;
+        left: 0%;
+      }
+
+      .forecast-date{
+        font-size: 0.7rem;
+      }
+      .footer-div ul{
+        display: flex;
+        /* margin: 1rem 0; */
+      }
+
+
   }
